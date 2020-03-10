@@ -8,6 +8,9 @@ let gamePattern = [];
 let userClickedPattern = [];
 let game = false;
 let level = 0;
+let levelCompleted = 0;
+let currScore = 0;
+let bestScore = 0;
 
 $(document).on('click', '.start-btn', function() {
 	$(this).attr('disabled', true).css('opacity', 0);
