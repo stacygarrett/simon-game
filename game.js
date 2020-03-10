@@ -42,13 +42,8 @@ $('.btn').click(function() {
 const checkAnswer = (currentLevel) => {
 	currScore = $('.current-score');
 	if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-		console.log(gamePattern[currentLevel]);
-		console.log('correct!');
 		if (userClickedPattern.length === gamePattern.length) {
-			console.log(level);
-			// level = levelCompleted;
 			currScore.text(`${level}`);
-			console.log(levelCompleted, bestScore);
 			setTimeout(() => nextSequence(), 1000);
 		}
 	} else {
@@ -68,9 +63,7 @@ const nextSequence = () => {
 	$('#level-title').text(`Level ${level}`);
 	let randomNum = Math.floor(Math.random() * 4);
 	const randomChosenColor = btnColors[randomNum];
-	console.log(randomChosenColor);
 	gamePattern.push(randomChosenColor);
-	console.log(gamePattern);
 	for (let i = 0; i < gamePattern.length; i++) {
 		function timer() {
 			let k = i;
