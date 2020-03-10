@@ -8,11 +8,8 @@ let gamePattern = [];
 let userClickedPattern = [];
 let game = false;
 let level = 0;
-let currScore = 0;
-let bestScore = 0;
-let levelCompleted;
 
-$(document).on('click', '.start-btn', function () {
+$(document).on('click', '.start-btn', function() {
 	$(this).attr('disabled', true).css('opacity', 0);
 	beginGame();
 });
@@ -31,7 +28,7 @@ const init = () => {
 	game = false;
 };
 
-$('.btn').click(function () {
+$('.btn').click(function() {
 	let userPick = $(this).attr('id');
 	userClickedPattern.push(userPick);
 	playSound(userPick);
@@ -105,7 +102,7 @@ const endGame = () => {
 };
 
 const restartGame = () => {
-	$('.restart').click(function () {
+	$('.restart').click(function() {
 		$('.restart').removeClass('restart').addClass('start-btn');
 		$('.current-score').text(`${0}`);
 		init();
