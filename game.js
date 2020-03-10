@@ -8,7 +8,7 @@ let gamePattern = [];
 let userClickedPattern = [];
 let game = false;
 let level = 0;
-let CurrScore = 0;
+let currScore = 0;
 let bestScore = 0;
 let levelCompleted;
 
